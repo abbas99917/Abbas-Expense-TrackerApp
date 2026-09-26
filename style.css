@@ -1,0 +1,667 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+  --primary: #635bff;
+  --primary-dark: #5046e5;
+
+  --background: #f6f7fb;
+  --card: #ffffff;
+
+  --text: #171923;
+  --muted: #7b8191;
+
+  --border: #e8eaf0;
+
+  --green: #16a34a;
+  --red: #ef4444;
+
+  --green-light: #dcfce7;
+  --red-light: #fee2e2;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+  font-family: "Inter", sans-serif;
+
+  background: var(--background);
+
+  color: var(--text);
+
+  min-height: 100vh;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+  width: min(1180px, 92%);
+
+  margin: auto;
+
+  padding: 35px 0 60px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 28px;
+}
+
+.subtitle {
+  color: var(--muted);
+
+  font-size: 13px;
+
+  margin-bottom: 6px;
+}
+
+.header h1 {
+  font-size: 30px;
+
+  font-weight: 800;
+}
+
+.profile-btn {
+  width: 45px;
+
+  height: 45px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #e7e5ff;
+
+  color: var(--primary);
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   BALANCE
+========================= */
+
+.balance-card {
+  background: linear-gradient(
+    135deg,
+    #635bff,
+    #8179ff
+  );
+
+  color: white;
+
+  border-radius: 20px;
+
+  padding: 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  box-shadow:
+    0 12px 30px
+    rgba(99, 91, 255, 0.18);
+}
+
+.balance-card p {
+  opacity: 0.8;
+
+  font-size: 14px;
+
+  margin-bottom: 8px;
+}
+
+.balance-card h2 {
+  font-size: 34px;
+
+  margin-bottom: 10px;
+}
+
+.balance-status {
+  display: inline-block;
+
+  font-size: 13px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  padding: 7px 10px;
+
+  border-radius: 20px;
+}
+
+.balance-icon {
+  width: 65px;
+
+  height: 65px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  font-size: 30px;
+}
+
+
+/* =========================
+   SUMMARY
+========================= */
+
+.summary {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 18px;
+
+  margin: 22px 0;
+}
+
+.summary-card {
+  background: var(--card);
+
+  border: 1px solid var(--border);
+
+  border-radius: 16px;
+
+  padding: 22px;
+}
+
+.summary-top {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: var(--muted);
+
+  font-size: 13px;
+
+  margin-bottom: 15px;
+}
+
+.summary-card .icon {
+  width: 34px;
+
+  height: 34px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 10px;
+
+  font-weight: bold;
+
+  font-size: 18px;
+}
+
+.income .icon {
+  color: var(--green);
+
+  background: var(--green-light);
+}
+
+.expense .icon {
+  color: var(--red);
+
+  background: var(--red-light);
+}
+
+.savings .icon {
+  color: var(--primary);
+
+  background: #e9e7ff;
+}
+
+.summary-card h3 {
+  font-size: 22px;
+
+  margin-bottom: 6px;
+}
+
+.summary-card p {
+  color: var(--muted);
+
+  font-size: 12px;
+}
+
+
+/* =========================
+   MAIN GRID
+========================= */
+
+.main-grid {
+  display: grid;
+
+  grid-template-columns: 380px 1fr;
+
+  gap: 22px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+  background: var(--card);
+
+  border: 1px solid var(--border);
+
+  border-radius: 18px;
+
+  padding: 25px;
+}
+
+.card h2 {
+  font-size: 19px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.add-section {
+  height: fit-content;
+}
+
+.form-group {
+  margin-top: 18px;
+}
+
+.form-group label {
+  display: block;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  margin-bottom: 8px;
+}
+
+input,
+select {
+  width: 100%;
+
+  height: 45px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 10px;
+
+  padding: 0 13px;
+
+  font-family: inherit;
+
+  outline: none;
+
+  background: #fafbfc;
+
+  color: var(--text);
+}
+
+input:focus,
+select:focus {
+  border-color: var(--primary);
+
+  background: white;
+}
+
+.form-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+}
+
+.add-btn {
+  width: 100%;
+
+  height: 46px;
+
+  margin-top: 22px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: var(--primary);
+
+  color: white;
+
+  font-weight: 600;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.add-btn:hover {
+  background: var(--primary-dark);
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   TRANSACTIONS HEADER
+========================= */
+
+.transactions-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 10px;
+}
+
+.view-btn {
+  border: none;
+
+  background: #f0efff;
+
+  color: var(--primary);
+
+  padding: 9px 13px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  font-size: 12px;
+}
+
+
+/* =========================
+   TRANSACTION
+   JS WILL CREATE THESE
+========================= */
+
+.transaction {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 17px 0;
+
+  border-bottom:
+    1px solid var(--border);
+}
+
+.transaction:last-child {
+  border-bottom: none;
+}
+
+.transaction-left {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+}
+
+.transaction-icon {
+  width: 43px;
+
+  height: 43px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 12px;
+
+  font-size: 19px;
+}
+
+.transaction h4 {
+  font-size: 14px;
+
+  margin-bottom: 5px;
+}
+
+.transaction p {
+  color: var(--muted);
+
+  font-size: 11px;
+}
+
+.transaction-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.transaction-right strong {
+  font-size: 13px;
+}
+
+.negative {
+  color: var(--red);
+}
+
+.positive {
+  color: var(--green);
+}
+
+.delete {
+  width: 27px;
+
+  height: 27px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #fff1f2;
+
+  color: var(--red);
+
+  font-size: 17px;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   CATEGORY COLORS
+========================= */
+
+.food {
+  background: #fff1e6;
+}
+
+.shopping {
+  background: #eeeaff;
+}
+
+.transport {
+  background: #e6f4ff;
+}
+
+.bills {
+  background: #ffe8e8;
+}
+
+.entertainment {
+  background: #e8f8ef;
+}
+
+.health {
+  background: #fff4d6;
+}
+
+.other {
+  background: #eeeeee;
+}
+
+.income-icon {
+  background: #e7f9ed;
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-state {
+  text-align: center;
+
+  padding: 55px 20px;
+
+  color: var(--muted);
+}
+
+.empty-icon {
+  width: 60px;
+
+  height: 60px;
+
+  display: grid;
+
+  place-items: center;
+
+  margin: 0 auto 15px;
+
+  border-radius: 16px;
+
+  background: #f0efff;
+
+  font-size: 26px;
+}
+
+.empty-state h3 {
+  color: var(--text);
+
+  font-size: 15px;
+
+  margin-bottom: 6px;
+}
+
+.empty-state p {
+  font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .summary {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .container {
+    width: 94%;
+
+    padding-top: 22px;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .balance-card {
+    padding: 22px;
+  }
+
+  .balance-card h2 {
+    font-size: 27px;
+  }
+
+  .balance-icon {
+    width: 50px;
+
+    height: 50px;
+
+    font-size: 23px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .transaction {
+    gap: 10px;
+  }
+
+  .transaction-right {
+    gap: 7px;
+  }
+
+  .transaction-right strong {
+    font-size: 12px;
+  }
+
+}

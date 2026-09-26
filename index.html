@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Expense Tracker</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Header -->
+    <header class="header">
+
+      <div>
+        <p class="subtitle">Personal Finance</p>
+        <h1>Expense Tracker</h1>
+      </div>
+
+      <button class="profile-btn">JD</button>
+
+    </header>
+
+
+    <!-- Balance -->
+    <section class="balance-card">
+
+      <div>
+        <p>Total Balance</p>
+
+        <h2 id="balance">$0.00</h2>
+
+        <span class="balance-status">
+          ↑ 0% this month
+        </span>
+      </div>
+
+      <div class="balance-icon">
+        💰
+      </div>
+
+    </section>
+
+
+    <!-- Summary -->
+    <section class="summary">
+
+      <!-- Income -->
+      <div class="summary-card income">
+
+        <div class="summary-top">
+          <span class="icon">↗</span>
+          <span>Income</span>
+        </div>
+
+        <h3 id="income">$0.00</h3>
+
+        <p>Income this month</p>
+
+      </div>
+
+
+      <!-- Expense -->
+      <div class="summary-card expense">
+
+        <div class="summary-top">
+          <span class="icon">↘</span>
+          <span>Expenses</span>
+        </div>
+
+        <h3 id="expense">$0.00</h3>
+
+        <p>Expenses this month</p>
+
+      </div>
+
+
+      <!-- Savings -->
+      <div class="summary-card savings">
+
+        <div class="summary-top">
+          <span class="icon">◉</span>
+          <span>Savings</span>
+        </div>
+
+        <h3 id="savings">$0.00</h3>
+
+        <p>Your current savings</p>
+
+      </div>
+
+    </section>
+
+
+    <!-- Main Content -->
+    <main class="main-grid">
+
+
+      <!-- Add Transaction -->
+      <section class="card add-section">
+
+        <div class="section-title">
+
+          <div>
+            <p class="subtitle">Manage your money</p>
+            <h2>Add Transaction</h2>
+          </div>
+
+        </div>
+
+
+        <form id="transactionForm">
+
+          <!-- Transaction Name -->
+          <div class="form-group">
+
+            <label for="title">
+              Transaction Name
+            </label>
+
+            <input
+              type="text"
+              id="title"
+              placeholder="e.g. Grocery Shopping"
+              required
+            >
+
+          </div>
+
+
+          <!-- Amount + Type -->
+          <div class="form-row">
+
+            <div class="form-group">
+
+              <label for="amount">
+                Amount
+              </label>
+
+              <input
+                type="number"
+                id="amount"
+                placeholder="$ 0.00"
+                min="0"
+                required
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="type">
+                Type
+              </label>
+
+              <select id="type">
+
+                <option value="expense">
+                  Expense
+                </option>
+
+                <option value="income">
+                  Income
+                </option>
+
+              </select>
+
+            </div>
+
+          </div>
+
+
+          <!-- Category + Date -->
+          <div class="form-row">
+
+            <div class="form-group">
+
+              <label for="category">
+                Category
+              </label>
+
+              <select id="category">
+
+                <option value="food">
+                  Food & Dining
+                </option>
+
+                <option value="shopping">
+                  Shopping
+                </option>
+
+                <option value="transport">
+                  Transport
+                </option>
+
+                <option value="bills">
+                  Bills
+                </option>
+
+                <option value="entertainment">
+                  Entertainment
+                </option>
+
+                <option value="health">
+                  Health
+                </option>
+
+                <option value="other">
+                  Other
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="date">
+                Date
+              </label>
+
+              <input
+                type="date"
+                id="date"
+                required
+              >
+
+            </div>
+
+          </div>
+
+
+          <button
+            class="add-btn"
+            type="submit"
+          >
+            + Add Transaction
+          </button>
+
+        </form>
+
+      </section>
+
+
+
+      <!-- Recent Transactions -->
+      <section class="card transactions-section">
+
+        <div class="transactions-header">
+
+          <div>
+            <p class="subtitle">Your activity</p>
+            <h2>Recent Transactions</h2>
+          </div>
+
+          <button class="view-btn">
+            View All
+          </button>
+
+        </div>
+
+
+        <!--JavaScript will add transactions here-->
+
+        <div class="transaction-list" id="transactionList"></div>
+
+
+        <!-- Empty State -->
+
+        <div class="empty-state"id="emptyState">
+
+        <div class="empty-icon">💸</div>
+          <h3>No transactions yet</h3>
+          <p>Add your first transaction to get started.</p>
+        </div>
+
+      </section>
+    </main>
+  </div>
+
+
+  <script src="main.js"></script>
+
+</body>
+
+</html>
