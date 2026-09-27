@@ -150,6 +150,11 @@ body {
 
   transition: 0.3s ease;
 }
+.profile-btn img{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+}
 
 .profile-btn:hover {
   transform: translateY(-2px);
