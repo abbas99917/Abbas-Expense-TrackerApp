@@ -69,7 +69,6 @@ transactionForm.addEventListener("submit",(e)=>{
 
 
 // display record on secreen
-
 const DisplayRecordOnScreen = () =>{
 
     transactionList.innerHTML = ""
@@ -78,7 +77,7 @@ const DisplayRecordOnScreen = () =>{
     transactionList.innerHTML += `     
     <div class="transaction">
         <div class="transaction-left">
-          <div class="transaction-icon">💰</div>
+          <div class="transaction-icon"><i class="fa-solid fa-sack-dollar"></i></div>
 
           <div>
             <h4>${curVal.title}</h4>
@@ -88,7 +87,7 @@ const DisplayRecordOnScreen = () =>{
 
         <div class="transaction-right">
             <strong>${curVal.type === "expense" ? "-" : "+"}$${curVal.amount}</strong>
-            <button class="delete" onclick="deleteNode(${curVal.id})">×</button>
+            <button class="delete" onclick="deleteNode(${curVal.id})"><i class="fa-solid fa-square-xmark"></i></button>
         </div>
       </div>`
 
