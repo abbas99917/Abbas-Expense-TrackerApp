@@ -103,147 +103,63 @@
 
       <!-- Add Transaction -->
       <section class="card add-section">
-
         <div class="section-title">
-
           <div>
             <p class="subtitle">Manage your money</p>
             <h2>Add Transaction</h2>
           </div>
-
         </div>
 
 
         <form id="transactionForm">
-
           <!-- Transaction Name -->
           <div class="form-group">
-
-            <label for="title">
-              Transaction Name
-            </label>
-
-            <input
-              type="text"
-              id="title"
-              placeholder="e.g. Grocery Shopping"
-              required
-            >
-
+            <label for="title">Transaction Nam</label>
+            <input type="text" id="title" placeholder="e.g. Grocery Shopping" required>
           </div>
 
 
           <!-- Amount + Type -->
           <div class="form-row">
-
             <div class="form-group">
-
-              <label for="amount">
-                Amount
-              </label>
-
-              <input
-                type="number"
-                id="amount"
-                placeholder="$ 0.00"
-                min="0"
-                required
-              >
-
+              <label for="amount"> Amount </label>
+              <input type="number" id="amount" placeholder="$ 0.00" min="0" required>
             </div>
-
-
+            
             <div class="form-group">
-
-              <label for="type">
-                Type
-              </label>
-
+              <label for="type">Type</label>
               <select id="type">
-
-                <option value="expense">
-                  Expense
-                </option>
-
-                <option value="income">
-                  Income
-                </option>
-
+                <option value="expense"> Expens</option>
+                <option value="income">Incom</option>
               </select>
-
             </div>
-
           </div>
-
 
           <!-- Category + Date -->
           <div class="form-row">
-
             <div class="form-group">
-
-              <label for="category">
-                Category
-              </label>
+              <label for="category">Category</label>
 
               <select id="category">
-
-                <option value="food">
-                  Food & Dining
-                </option>
-
-                <option value="shopping">
-                  Shopping
-                </option>
-
-                <option value="transport">
-                  Transport
-                </option>
-
-                <option value="bills">
-                  Bills
-                </option>
-
-                <option value="entertainment">
-                  Entertainment
-                </option>
-
-                <option value="health">
-                  Health
-                </option>
-
-                <option value="other">
-                  Other
-                </option>
-
+                            <option value="food">Food & Dining</option>
+                            <option value="shopping">Shopping</option>
+                            <option value="transport">Transport</option>
+                            <option value="bills">Bills</option>
+                            <option value="entertainment"> Entertainment </option>
+                            <option value="health"> Health</option>
+                            <option value="other">Other</option>
               </select>
-
             </div>
 
 
             <div class="form-group">
-
-              <label for="date">
-                Date
-              </label>
-
-              <input
-                type="date"
-                id="date"
-                required
-              >
-
+                 <label for="date">Date</label>
+                <input type="date"id="date"required>
             </div>
-
           </div>
 
 
-          <button
-            class="add-btn"
-            type="submit"
-          >
-            + Add Transaction
-          </button>
-
+          <button class="add-btn" type="submit">+ Add Transaction</button>
         </form>
 
       </section>
@@ -252,18 +168,12 @@
 
       <!-- Recent Transactions -->
       <section class="card transactions-section">
-
         <div class="transactions-header">
-
-          <div>
+           <div>
             <p class="subtitle">Your activity</p>
             <h2>Recent Transactions</h2>
           </div>
-
-          <button class="view-btn">
-            View All
-          </button>
-
+          <button class="view-btn"> View All</button>
         </div>
 
 
@@ -274,12 +184,11 @@
 
         <!-- Empty State -->
 
-        <div class="empty-state"id="emptyState">
-
+        <!-- <div class="empty-state"id="emptyState">
         <div class="empty-icon">💸</div>
-          <h3>No transactions yet</h3>
-          <p>Add your first transaction to get started.</p>
-        </div>
+            <h3>No transactions yet</h3>
+            <p>Add your first transaction to get started.</p>
+        </div> -->
 
       </section>
     </main>
